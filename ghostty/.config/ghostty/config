@@ -1,14 +1,14 @@
 #theme = "catppuccin-mocha"
 theme = "catppuccin-mocha.conf"
-background-opacity = 0.85
-background-blur-radius =35
+background-opacity = 0.80
+background-blur-radius =40
 
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 mouse-hide-while-typing = true
 
 font-family = "IosevkaTerm Nerd Font"
-font-size = 16
+font-size = 14
 cursor-style = block
 cursor-style-blink = false
 cursor-invert-fg-bg = true
