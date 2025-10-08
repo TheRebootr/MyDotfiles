@@ -1,7 +1,7 @@
 #theme = "catppuccin-mocha"
 theme = "catppuccin-mocha.conf"
-background-opacity = 0.80
-background-blur-radius =40
+background-opacity = 0.85
+background-blur-radius =45
 
 macos-titlebar-style = hidden
 macos-option-as-alt = true

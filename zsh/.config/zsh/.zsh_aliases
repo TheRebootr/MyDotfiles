@@ -11,7 +11,7 @@ alias grep='rg'
 alias find='fd'
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions 
-# alias ls="eza --no-filesize --no-permissions --no-time --long --color=always --icons=always --no-user" 
+alias ls="eza --no-filesize --no-permissions --no-time --long --color=always --icons=always --no-user" 
 alias lsa="eza -a --no-filesize --color=always --icons=always --no-user" 
 alias vof="~/scripts/fzf_listoldfiles.sh"
 alias vf="~/scripts/zoxide_openfiles_nvim.sh"
