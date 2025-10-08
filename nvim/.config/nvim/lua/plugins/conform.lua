@@ -37,6 +37,7 @@ return { -- Autoformat
       html = { 'prettier' },
       json = { 'prettier' },
       markdown = { 'prettier' },
+      python = { 'ruff' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

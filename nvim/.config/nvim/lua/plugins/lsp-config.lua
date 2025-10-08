@@ -235,7 +235,7 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -279,6 +279,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'prettier',
+        'ruff',
         'vale', -- for markdown and text
         'dotenv-linter',
       })

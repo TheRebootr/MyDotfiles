@@ -10,6 +10,17 @@ return {
       transparent_background = true,
       auto_integrations = true,
       no_italic = true,
+      custom_highlights = function(colors)
+        return {
+          RenderMarkdownCodeBorder = { bg = colors.surface0 },
+          RenderMarkdownCode = { bg = colors.surface0 },
+          RenderMarkdownH1Bg = { fg = colors.crust, bg = colors.maroon },
+          RenderMarkdownH2Bg = { fg = colors.crust, bg = colors.green },
+          RenderMarkdownH3Bg = { fg = colors.crust, bg = colors.sky },
+          RenderMarkdownH4Bg = { fg = colors.crust, bg = colors.blue },
+          RenderMarkdownH1 = { fg = colors.crust, bold = true },
+        }
+      end,
     }
 
     -- Like many other themes, this one has different styles, and you could load
