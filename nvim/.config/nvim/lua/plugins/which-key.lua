@@ -1,10 +1,11 @@
 return { -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
-  event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+  event = 'VeryLazy', -- Sets the loading event to 'VimEnter'
   opts = {
+    preset = 'helix',
     -- delay between pressing a key and opening which-key (milliseconds)
     -- this setting is independent of vim.o.timeoutlen
-    delay = 1000,
+    delay = 800,
     icons = {
       -- set icon mappings to true if you have a Nerd Font
       mappings = vim.g.have_nerd_font,
@@ -38,13 +39,6 @@ return { -- Useful plugin to show you pending keybinds.
         F11 = '<F11>',
         F12 = '<F12>',
       },
-    },
-
-    -- Document existing key chains
-    spec = {
-      { '<leader>s', group = '[S]earch' },
-      { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
     },
   },
 }

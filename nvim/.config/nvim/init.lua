@@ -131,8 +131,8 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
-require 'keymaps'
 require('lazy').setup 'plugins'
+require 'keymaps'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
