@@ -7,20 +7,23 @@ macos-titlebar-style = hidden
 macos-option-as-alt = true
 mouse-hide-while-typing = true
 
-font-family = "IosevkaTerm Nerd Font"
+font-family = "PragmataPro Liga"
+font-feature = "ss20", "ss15", "ss18", "ss13"
 font-size = 14
 cursor-style = block
 cursor-style-blink = false
 cursor-invert-fg-bg = true
+adjust-cell-height = 10%
 
 shell-integration-features = no-cursor
 copy-on-select = true
 
 confirm-close-surface = false
 window-decoration = auto
-window-padding-x = 10
+window-padding-x = 20
 window-padding-y = 10
-window-padding-balance = false
+window-padding-balance = true
+window-save-state = always
 
 auto-update = check
 auto-update-channel = stable
