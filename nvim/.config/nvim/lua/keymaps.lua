@@ -6,6 +6,7 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<C-s>', '<cmd>write<CR>')
 vim.keymap.set('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice' })
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- Tmux Navigator Remapping
 vim.keymap.set('n', '<C-Left>', '<cmd>TmuxNavigateLeft<CR>')
