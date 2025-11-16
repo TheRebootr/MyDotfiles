@@ -1,5 +1,6 @@
-return { -- Collection of various small independent plugins/modules
-  'echasnovski/mini.nvim',
+return {
+  'nvim-mini/mini.nvim',
+  version = false,
   config = function()
     -- Better Around/Inside textobjects
     --
@@ -15,6 +16,8 @@ return { -- Collection of various small independent plugins/modules
     -- - sd'   - [S]urround [D]elete [']quotes
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
+
+    require('mini.animate').setup()
 
     local hipatterns = require 'mini.hipatterns'
     hipatterns.setup {
