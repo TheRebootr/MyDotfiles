@@ -20,5 +20,6 @@ return {
     },
     indent = { enabled = true },
     picker = { enabled = true },
+    scroll = { enabled = true },
   },
 }

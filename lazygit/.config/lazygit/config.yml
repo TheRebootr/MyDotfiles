@@ -1,12 +1,10 @@
 os:
   editPreset: 'nvim'
-
 git:
   branchPrefix: 'feature/theRebootr/'
-  paging:
-    colorArg: always
-    pager: diff-so-fancy
-
+  pagers:
+    - colorArg: always
+      pager: diff-so-fancy
 gui:
   theme:
     activeBorderColor:

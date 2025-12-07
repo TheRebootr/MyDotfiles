@@ -17,8 +17,6 @@ return {
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require('mini.surround').setup()
 
-    require('mini.animate').setup()
-
     local hipatterns = require 'mini.hipatterns'
     hipatterns.setup {
       highlighters = {
