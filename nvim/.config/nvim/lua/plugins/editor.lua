@@ -1,33 +1,103 @@
 return {
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  { 'folke/which-key.nvim', opts = { delay = 800 } },
   {
-    'windwp/nvim-autopairs', -- Auto closes (), '' etc
-    event = 'InsertEnter',
-    opts = {},
+    'folke/flash.nvim',
+    ---@type Flash.Config
+    opts = {
+      labels = 'arstgmneioqwfbjluyzxcdvkh',
+      label = { rainbow = { enabled = true } },
+    },
   },
   {
-    'folke/trouble.nvim', -- Adds git related signs to the gutter, as well as utilities for managing changes
-    opts = {},
-    cmd = 'Trouble',
-  },
-  { -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
-    main = 'ibl',
-    opts = {},
+    'monaqa/dial.nvim',
+    keys = {
+      { '<leader>i', '', desc = '+increment', mode = { 'n', 'v' } },
+      {
+        '<leader>ia',
+        '<C-a>',
+        desc = 'Increment',
+        remap = true,
+      },
+      {
+        '<leader>ix',
+        '<C-x>',
+        desc = 'Decrement',
+        remap = true,
+      },
+      -- {
+      --   'gda',
+      --   'g<C-a>',
+      --   desc = 'Increment',
+      --   remap = true,
+      -- },
+      -- {
+      --   'gdx',
+      --   'g<C-x>',
+      --   desc = 'Decrement',
+      --   remap = true,
+      -- },
+    },
   },
   {
-    -- Highlight todo, notes, etc in comments
-    'folke/todo-comments.nvim',
-    event = 'VimEnter',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = { signs = false },
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    opts = {
+      menu = {
+        width = vim.api.nvim_win_get_width(0) - 4,
+      },
+      settings = {
+        save_on_toggle = true,
+      },
+    },
+    keys = function()
+      local keys = {
+        {
+          '<leader>H',
+          function()
+            require('harpoon'):list():add()
+          end,
+          desc = 'Harpoon File',
+        },
+        {
+          '<leader>h',
+          function()
+            local harpoon = require 'harpoon'
+            harpoon.ui:toggle_quick_menu(harpoon:list())
+          end,
+          desc = 'Harpoon Quick Menu',
+        },
+      }
+
+      for i = 1, 5 do
+        table.insert(keys, {
+          '<leader>' .. i,
+          function()
+            require('harpoon'):list():select(i)
+          end,
+          desc = 'Harpoon to File ' .. i,
+        })
+      end
+      return keys
+    end,
   },
   {
-    'folke/ts-comments.nvim',
-    opts = {},
-    event = 'VeryLazy',
-    enabled = vim.fn.has 'nvim-0.10.0' == 1,
+    'lewis6991/gitsigns.nvim',
+    opts = {
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '' },
+        topdelete = { text = '' },
+        changedelete = { text = '~' },
+        untracked = { text = '┆' },
+      },
+      signs_staged = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '' },
+        topdelete = { text = '' },
+        changedelete = { text = '~' },
+      },
+    },
   },
 }

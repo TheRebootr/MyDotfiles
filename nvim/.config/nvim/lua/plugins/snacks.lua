@@ -1,25 +1,26 @@
 return {
-  'folke/snacks.nvim',
-  priority = 1000,
-  lazy = false,
-  ---@type snacks.Config
+  'snacks.nvim',
   opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-    -- bigfile = { enabled = true },
     dashboard = {
-      enabled = true,
-      sections = {
-        { section = 'header' },
-        { icon = ' ', title = 'Keymaps', section = 'keys', indent = 2, padding = 1 },
-        { icon = ' ', title = 'Recent Files', section = 'recent_files', indent = 2, padding = 1 },
-        { icon = ' ', title = 'Projects', section = 'projects', indent = 2, padding = 1 },
-        { section = 'startup' },
+      preset = {
+        header = [[
+     ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+     ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+     ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+     ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+     ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
       },
     },
-    indent = { enabled = true },
-    picker = { enabled = true },
-    scroll = { enabled = true },
+    -- terminal = {
+    --   win = {
+    --     keys = {
+    --       nav_h = { "<C-h>", term_nav("h"), desc = "Go to Left Window", expr = true, mode = "t" },
+    --       nav_j = { "<C-j>", term_nav("j"), desc = "Go to Lower Window", expr = true, mode = "t" },
+    --       nav_k = { "<C-k>", term_nav("k"), desc = "Go to Upper Window", expr = true, mode = "t" },
+    --       nav_l = { "<C-l>", term_nav("l"), desc = "Go to Right Window", expr = true, mode = "t" },
+    --     },
+    --   },
+    -- },
   },
 }
