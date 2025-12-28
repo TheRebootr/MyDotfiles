@@ -1,7 +1,7 @@
 #theme = "catppuccin-mocha"
 theme = "catppuccin-mocha.conf"
-background-opacity = 0.88
-background-blur-radius =48
+background-opacity = 0.85
+background-blur-radius = 35
 desktop-notifications = true
 
 macos-titlebar-style = hidden
@@ -12,9 +12,8 @@ font-family = "PragmataPro Liga"
 font-feature = "ss20", "ss15", "ss18", "ss13"
 font-size = 14
 cursor-style = block
-cursor-style-blink = true
+cursor-style-blink = false
 # cursor-invert-fg-bg = true
-cursor-color = #25D18B
 adjust-cell-height = 10%
 
 shell-integration-features = no-cursor
@@ -22,7 +21,7 @@ copy-on-select = true
 
 confirm-close-surface = false
 window-decoration = auto
-window-padding-x = 10
+window-padding-x = 15
 window-padding-y = 10
 window-padding-balance = true
 window-save-state = always

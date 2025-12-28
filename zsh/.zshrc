@@ -81,7 +81,7 @@ source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-sear
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 # fnm
 FNM_PATH="/Users/therebootr/Library/Application Support/fnm"

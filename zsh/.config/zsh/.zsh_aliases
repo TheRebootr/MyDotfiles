@@ -1,10 +1,11 @@
 # Navigation
-alias cd..='z'
+# alias cd..='z'
 alias ..='cd ..'
 alias ...='cd ../..'
 
 # Development
 alias vim='nvim'
+alias v='nvim'
 alias lg='lazygit'
 alias cat='bat'
 alias grep='rg'

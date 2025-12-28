@@ -6,3 +6,16 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+local group = vim.api.nvim_create_augroup('CursorLineControl', { clear = true })
+
+vim.api.nvim_create_autocmd('ModeChanged', {
+  group = group,
+  callback = function()
+    local mode = vim.fn.mode()
+    if mode == 'n' then
+      vim.opt.cursorline = true
+    elseif mode == 'i' then
+      vim.opt.cursorline = false -- Or different color
+    end
+  end,
+})

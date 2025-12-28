@@ -5,7 +5,7 @@ command_timeout = 1000
 add_newline = true
 
 format = """
- ➜\
+ ➜ \
 $directory\
 $azure\
 $git_branch\
@@ -193,7 +193,7 @@ symbol = ""
 format = '[ $symbol( $version) ]($style)'
 
 [os.symbols]
-Amazon= "󰛓 "
+Amazon = "󰛓 "
 Gentoo = " "
 HardenedBSD = "󰞌 "
 Illumos = "󰈸 "
