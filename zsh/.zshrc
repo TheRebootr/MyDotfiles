@@ -90,3 +90,10 @@ if [ -d "$FNM_PATH" ]; then
   eval "$(fnm env --use-on-cd --shell zsh)"
   # eval "`fnm env`"
 fi
+
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^g' edit-command-line
+bindkey '^x^e' edit-command-line
