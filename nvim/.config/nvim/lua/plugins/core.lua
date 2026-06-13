@@ -1,9 +1,11 @@
 return {
   -- LazyVim overrides
-  { 'LazyVim/LazyVim', opts = { colorscheme = 'catppuccin' } },
+  { 'LazyVim/LazyVim', opts = { colorscheme = 'catppuccin-nvim' } },
   {
     'catppuccin/nvim',
     name = 'catppuccin',
+    lazy = false,
+    priority = 1000,
     opts = {
       flavour = 'mocha',
       transparent_background = true,
@@ -11,11 +13,6 @@ return {
         transparent = false,
         solid = false,
       },
-      -- dim_inactive = {
-      --   enabled = true,
-      --   shade = 'dark',
-      --   percentage = 1,
-      -- },
       no_italic = true,
       styles = {
         conditionals = {},
@@ -34,5 +31,13 @@ return {
         }
       end,
     },
+    -- catppuccin compiles highlights to a cache keyed by the opts hash.
+    -- setup() MUST run before the colorscheme is applied, otherwise load()
+    -- self-calls setup() with empty opts and bakes a solid (non-transparent)
+    -- cache. Doing it explicitly here guarantees the correct order.
+    config = function(_, opts)
+      require('catppuccin').setup(opts)
+      vim.cmd.colorscheme('catppuccin-nvim')
+    end,
   },
 }
