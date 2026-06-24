@@ -1,0 +1,20 @@
+[user]
+	name = TheRebootr
+	email = robertcastrojr10@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	pager = delta 
+	editor = nvim
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+    conflictstyle = zdiff3
+[delta]
+    features = arctic-fox
+    navigate = true
+    line-numbers = true
+    side-by-side = true
+    dark = true
+[include]
+   path = ~/.config/delta/themes.gitconfig

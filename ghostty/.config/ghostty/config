@@ -8,14 +8,13 @@ macos-titlebar-style = hidden
 macos-option-as-alt = true
 mouse-hide-while-typing = true
 
-font-family = "PragmataPro Liga"
-font-feature = "ss20", "ss15", "ss18", "ss13"
+font-family = PragmataPro Liga
+font-feature = ss20=2, ss15=2, ss18=2, ss13=2, calt=2
 font-size = 14
 cursor-style = block
 cursor-style-blink = false
 # cursor-invert-fg-bg = true
 adjust-cell-height = 10%
-
 shell-integration-features = no-cursor
 copy-on-select = true
 

@@ -40,7 +40,7 @@ automatically-unhide-macos-hidden-apps = false
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
-preset = 'colemak'
+preset = 'qwerty'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -199,10 +199,10 @@ backspace = ['close-all-windows-but-current', 'mode main']
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+# alt-shift-h = ['join-with left', 'mode main']
+# alt-shift-j = ['join-with down', 'mode main']
+# alt-shift-k = ['join-with up', 'mode main']
+# alt-shift-l = ['join-with right', 'mode main']
 
 # down = 'volume down'
 # up = 'volume up'

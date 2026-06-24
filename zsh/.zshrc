@@ -81,7 +81,6 @@ source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-sear
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
-eval "$(zoxide init zsh --cmd cd)"
 
 # fnm
 FNM_PATH="/Users/therebootr/Library/Application Support/fnm"
@@ -97,3 +96,12 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^g' edit-command-line
 bindkey '^x^e' edit-command-line
+# eval "$(zoxide init zsh --cmd cd)"
+eval "$(mise activate zsh)"
+
+# Supabase CLI -> Podman bridge (added by Claude Code)
+if command -v podman >/dev/null 2>&1; then
+  __podman_sock="$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}' 2>/dev/null)"
+  [ -n "$__podman_sock" ] && export DOCKER_HOST="unix://$__podman_sock"
+  unset __podman_sock
+fi

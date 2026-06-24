@@ -7,7 +7,7 @@ return {
   opts = {
     heading = {
       icons = { '󰎤 ', '󰎧 ', '󰎪 ', '󰎭 ', '󰎱 ', '󰎳 ' },
-      width = { 'full', ' full', 'block', 'block', 'block', 'block' },
+      width = { 'full', 'full', 'block', 'block', 'block', 'block' },
     },
   },
 }

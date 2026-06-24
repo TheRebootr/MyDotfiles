@@ -3,6 +3,8 @@
 -- Add any additional options here
 
 vim.g.have_nerd_font = true
+vim.g.lazyvim_picker = 'snacks'
+vim.g.trouble_lualine = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
